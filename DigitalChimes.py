@@ -17,7 +17,7 @@ def digitalChime ():
     sig = 3
 
     #play this many notes
-    for i in range(0,400):
+    for i in range(0,40):
         next = random.randint(1,6)
 
         print('|  ',end='')
@@ -89,4 +89,9 @@ def digitalChime ():
         player.play_wave(synthesizer.generate_chord(chord,time))
         # player.play_wave(synthesizer.generate_constant_wave(next,0.5))
 
-if __name__ == "__main__": digitalChime()
+    player.play_wave(synthesizer.generate_chord(chord,time*sig-1))
+
+def main():
+    digitalChime()
+
+if __name__ == "__main__": main()
