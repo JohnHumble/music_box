@@ -1,7 +1,7 @@
 from synthesizer import Player, Synthesizer, Waveform
 from Notes import Notes
 
-import random
+import random, sys 
 
 
 def digitalChime (number_of_notes):
@@ -92,6 +92,14 @@ def digitalChime (number_of_notes):
     player.play_wave(synthesizer.generate_chord(chord,time*sig-1))
 
 def main():
-    digitalChime(100)
+    count = 0
+    if len(sys.argv) > 1:
+        count = (int)(sys.argv[1])
+    print(count)
+    if count > 0:
+        digitalChime(count)
+    else:
+        while(True):
+            digitalChime(600)
 
 if __name__ == "__main__": main()
