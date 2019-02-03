@@ -66,7 +66,7 @@ def digitalChime (number_of_notes):
             next = Notes['C5']
             print('C^ ',end='')
 
-        if i % (int)(20 / time) == 0:
+        if i % (int)(10 / time) == 0:
             print(' | ',end='♫ ')
             sig = random.randint(2,8)
             time = random.randint(2,10)*0.125
