@@ -4,7 +4,7 @@ from Notes import Notes
 import random
 
 
-def digitalChime ():
+def digitalChime (number_of_notes):
     player = Player()
     synthesizer = Synthesizer(osc1_waveform=Waveform.sawtooth, osc1_volume=0.1, use_osc2=False)
     player.open_stream()
@@ -17,7 +17,7 @@ def digitalChime ():
     sig = 3
 
     #play this many notes
-    for i in range(0,40):
+    for i in range(0,number_of_notes):
         next = random.randint(1,6)
 
         print('|  ',end='')
@@ -92,6 +92,6 @@ def digitalChime ():
     player.play_wave(synthesizer.generate_chord(chord,time*sig-1))
 
 def main():
-    digitalChime()
+    digitalChime(100)
 
 if __name__ == "__main__": main()
