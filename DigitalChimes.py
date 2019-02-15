@@ -69,7 +69,7 @@ def digitalChime (number_of_notes):
         if i % (int)(8 / (time)) == 0:
             print(' | ',end='♫ ')
             sig = random.randint(2,8)
-            time = random.randint(2,10)*0.125
+            time = random.randint(2,10) * 0.125
             octive = random.randint(0,2)
             if octive == 0:
                 octive = 0.5
